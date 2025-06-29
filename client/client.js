@@ -1,7 +1,7 @@
 import { io } from "https://cdn.socket.io/4.7.2/socket.io.esm.min.js";
 
 
-const socket = io("online-timer-backend-production.up.railway.app", {
+const socket = io("timespot-clone.railway.internal", {
   transports: ["websocket"],
 });
 
