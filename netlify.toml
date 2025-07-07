@@ -1,0 +1,10 @@
+[build]
+  publish = "client"
+
+[[redirects]]
+  from = "/client/login"
+  to = "/client/login.html"
+  status = 200
+
+[clean_urls]
+  value = false
