@@ -6,7 +6,7 @@ const socket = io("timespot-clone-production.up.railway.app", {
 });
 
 // --- LOGIN ---
-if (window.location.pathname.endsWith("login.html")) {
+if (window.location.pathname.match("login")) {
   const loginButton = document.querySelector("#loginButton");
   if (loginButton) {
     const usernameInput = document.querySelector("#username");
