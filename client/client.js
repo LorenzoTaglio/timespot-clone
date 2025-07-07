@@ -5,6 +5,12 @@ const socket = io("timespot-clone-production.up.railway.app", {
   transports: ["websocket"],
 });
 
+const logOutButton = document.querySelector("logout-button");
+
+logOutButton.addEventListener("click", ()=>{
+  window.location.href("login.html");
+})
+
 // --- LOGIN ---
 if (window.location.pathname.endsWith("login.html")) {
   const loginButton = document.querySelector("#loginButton");
