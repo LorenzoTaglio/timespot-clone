@@ -718,7 +718,7 @@ if (window.location.pathname.endsWith("/grouptimer.html")) {
   socket.on("userAccept", (serverGroupId, serverUserId)=>{
     console.log(serverUserId);
     if(parseInt(groupId) === serverGroupId){
-        const acceptUser = document.querySelector(`#user${serverUserId}> p > i`);
+        const acceptUser = document.querySelector(`#user${serverUserId}> div > i`);
         acceptUser.ariaLabel = "accepted";
         acceptUser.classList.remove("sent");
         acceptUser.classList.add("accepted");
@@ -729,7 +729,7 @@ if (window.location.pathname.endsWith("/grouptimer.html")) {
 
   socket.on("userDecline", (serverGroupId, serverUserId)=>{
     if(parseInt(groupId) === serverGroupId){
-      const deleteUser = document.querySelector(`#user${serverUserId}> p > i`);
+      const deleteUser = document.querySelector(`#user${serverUserId}> div > i`);
       deleteUser.ariaLabel = "declined";
       deleteUser.classList.remove("sent");
       deleteUser.classList.add("declined");
